@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+  <!-- This app is massive! -->
+  <named-config name="helloworld"> 
+  <!-- 4个基本连接，驱动名字，驱动访问地址，用户名，密码-->
+    <property name="driverClass">com.mysql.jdbc.Driver</property>
+    <property name="jdbcUrl">jdbc:mysql://localhost:3306/bookstore</property>
+    <property name="user">root</property>
+    <property name="password">537423Ab</property>
+    <!--连接池配置，连接数（最大，最小，初始化，增加），检测可用性，最大空闲时间 -->
+    <!-- 最大连接数 -->
+    <property name="maxPoolSize">10</property>
+    <!-- 最小连接数 -->
+    <property name="minPoolSize">5</property>
+    <!-- 初始化连接数 -->
+    <property name="initialPoolSize">3</property>
+     <!-- 多长时间检测下连接的可用性，以s为单位-->
+    <property name="idleConnectionTestPeriod">3600</property>
+    <!-- 如果不够用，一次性增长多少 -->
+    <property name="acquireIncrement">5</property>
+    <!-- 连接的空闲时间，以分种为单位-->
+    <property name="maxIdleTime">3000</property>
+  </named-config>
+</c3p0-config>
